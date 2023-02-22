@@ -222,6 +222,9 @@ Client(id=43215, name=Bernice Stiver, address=4091 Quilly Lane Columbus, OH)
 Client(id=76401, name=Hilda Rios, address=4649 Beeghley Street Stephenville, TX)
 ```
 
+---
+
+
 `SELECT * FROM clients WHERE is_premium_client IS true`
 ```python
 with Session() as session:
@@ -237,6 +240,7 @@ Client(id=60089, name=Marion White, address=1474 John Calvin Drive Buffalo Grove
 Client(id=76401, name=Hilda Rios, address=4649 Beeghley Street Stephenville, TX)
 ```
 
+---
 
 
 `SELECT * FROM clients WHERE id IN (3176, 60089, 43215)`
@@ -254,6 +258,8 @@ Client(id=3176, name=John Doe, address=2910 Kyle Street Julesburg, NE)
 Client(id=60089, name=Marion White, address=1474 John Calvin Drive Buffalo Grove, IL)
 Client(id=43215, name=Bernice Stiver, address=4091 Quilly Lane Columbus, OH)
 ```
+
+---
 
 
 `SELECT * FROM clients WHERE id
