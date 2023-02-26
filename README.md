@@ -260,21 +260,3 @@ Client(id=43215, name=Bernice Stiver, address=4091 Quilly Lane Columbus, OH)
 ```
 
 ---
-
-
-`SELECT * FROM clients WHERE id
-(3176, 60089, 43215)`
-```python
-with Session() as session:
-    stmt = select(Client).where(Client.)
-    all_records = session.scalars(stmt)
-    session.commit()
-
-    for x in all_records:
-        print(x)
-```
-```
-Client(id=3176, name=John Doe, address=2910 Kyle Street Julesburg, NE)
-Client(id=60089, name=Marion White, address=1474 John Calvin Drive Buffalo Grove, IL)
-Client(id=43215, name=Bernice Stiver, address=4091 Quilly Lane Columbus, OH)
-```
