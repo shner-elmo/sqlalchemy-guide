@@ -5,10 +5,10 @@
 
 ## Connection
 
-There are two ways to pass the parameters for creating the connection:
+There are two ways to create the database connection,
 Using a URI/URL string (the classic way) or by passing an instance of `sqlalchemy.URL`:
 
-Passing the string:
+Passing the URI string:
 ```python
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -18,7 +18,7 @@ engine = create_engine(url=url, echo=True)
 Session = sessionmaker(bind=engine)
 ```
 
-
+Or by creating an instance of `sqlalchemy.URL`:
 ```python
 from sqlalchemy import create_engine, URL
 from sqlalchemy.orm import sessionmaker
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS clients (
 2023-02-22 12:27:18,508 INFO sqlalchemy.engine.Engine COMMIT
 ```
 
-Or using
+Or by creating a class:
 ```python
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy import Column, INTEGER, VARCHAR, BOOLEAN
@@ -130,7 +130,7 @@ CREATE TABLE clients (
 
 ## Inserting Records
 
-To insert new records we can either pass a string with SQL query, or create an instance of
+To insert new records we can either pass a string with the SQL query, or create an instance of
 the class and pass that directly:
 
 Passing a string:
